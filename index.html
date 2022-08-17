@@ -1,0 +1,444 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Automation Testing</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<a href="https://revealjs.com">
+					<img src="https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/5d1c49d3f17d00e680cb98da576c89d6.jpg/s/s1200x/a/2885/sc/209"
+						alt="reveal.js logo" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;"
+						class="demo-logo">
+				</a>
+				<h3>Automation Testing</h3>
+				<p>
+					<small>Presintation by <a href="https://github.com/aleksa-mnk">Aleksa Mankevich</a> for <a
+							href="https://rs.school/">RS School</a></small>
+				</p>
+			</section>
+			<section>
+				<img src="https://media2.giphy.com/media/ukMiDlCmdv2og/200.webp?cid=ecf05e47hv8ali2ho47f4pg6jls3019ughxl8bgpad9mgz6f&rid=200.webp&ct=g"
+					style="height: 310px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+				<p>During development, we can cover our code not only with obscenities, but also with tests.</p>
+			</section>
+			<section>
+				<section>
+					<div class="fight">
+						<img src="https://c.tenor.com/nEOQTzPym_kAAAAj/sweet-dreams.gif" alt="">
+						<img src="https://c.tenor.com/C-erVStvjMgAAAAj/mortal-kombat-reptile.gif" alt="">
+					</div>
+					<br>
+					<h4>Manual testing <span style="color: #1fa4c2;">VS</span> Automation testing</h4>
+				</section>
+				<section>
+					<img src="https://media0.giphy.com/media/3oKIPnAiaMCws8nOsE/200w.webp?cid=ecf05e47hv8ali2ho47f4pg6jls3019ughxl8bgpad9mgz6f&rid=200w.webp&ct=g"
+						style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"
+						alt="">
+					<p>Manual testing is performed by a human sitting in front of a computer <span
+							style="color: #ff2c2d;">carefully executing the test steps</span>.</p>
+				</section>
+				<section>
+					<img src="https://media2.giphy.com/media/SACoDGYTvVNhZYNb5a/200.webp?cid=ecf05e47zpmmcg816lybcje1vhjjz7prqbubitjmjei1ok1p&rid=200.webp&ct=g"
+						style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"
+						alt="">
+					<p>Automation testing means using an automation tool to execute your test case suite.</p>
+				</section>
+			</section>
+			<section>
+				<!-- <img src="https://img.freepik.com/premium-vector/target-orientation-illustration-comic-style_530597-623.jpg?w=2000" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo" -->
+				<!-- alt=""> -->
+				<h4>Goal of automation is to <br><span style="color: #ff2c2d;">reduce number of test cases to be run
+						manualy and not eliminate manual testing all together</span>.</h4>
+			</section>
+			<section>
+				<section>
+					<img src="https://media0.giphy.com/media/3cXmze4Y8igXdnkc3U/200.webp?cid=ecf05e47duaxho24bkr8153x8mgl5pb8oo3w0t3xxuxhbr7v&rid=200.webp&ct=g"
+						style="height: 400px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"
+						alt="">
+				</section>
+				<section>
+					<h3>What is AT used for?</h2>
+						<ol>
+							<li class="fragment fade-up">Time and cost consuming</li>
+							<li class="fragment fade-up">Multilingual sites manually</li>
+							<li class="fragment fade-up">You can run automated test unattended (overnight)</li>
+							<li class="fragment fade-up">Speed of test execution & Test Coverage</li>
+							<li class="fragment fade-up">Error prone</li>
+						</ol>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3 style="color: #ff2c2d;">Which Test Cases to Automate?</h3>
+					<h4>Using the following criterion to increase the automation ROI</h2>
+						<ul>
+							<li class="fragment fade-in">Test cases that are repeatedly executed</li>
+							<li class="fragment fade-in">Test Cases that are very tedious or difficult to perform
+								manually</li>
+							<li class="fragment fade-in">Test Cases which are time-consuming</li>
+							<li class="fragment fade-in">High Risk – Business Critical test cases</li>
+						</ul>
+				</section>
+				<section>
+					<h3 style="color: #ff2c2d;">The following category of test cases are not suitable for automation:
+					</h3>
+					<ul>
+						<li class="fragment fade-in">Test Cases that are newly designed and not executed manually at
+							least once</li>
+						<li class="fragment fade-in">Test Cases for which the requirements are frequently changing</li>
+						<li class="fragment fade-in">Test cases which are executed on an ad-hoc basis.</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">
+						<div data-id="box1"
+							style="background-color: #959595; width: 100%; height: 5px; margin: 10px; border-radius: 5px; font-size: 5px;">
+						</div>
+					</div>
+					<div>
+						<h2 style="margin-top: 20px; color: #ff2c2d;">Automation process</h2>
+						<h4>The following steps are followed in an automation process.</h4>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div>
+						<h2 style="color: #ff2c2d;">Automation process</h2>
+						<h4 style="margin-bottom: 20px;">The following steps are followed in an automation process.</h4>
+					</div>
+					<div class="r-hstack justify-center">
+						<div data-id="box1" data-auto-animate-delay="0"
+							style="background-color: #ff5656;  width: 700px; height: 50px; margin: 10px; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Tool Selection</div>
+					</div>
+				</section>
+				<section>
+					<h2 style="color: #ff5656;">Test tool selection</h2>
+					<ul>
+						<li class="fragment fade-in">Test Tool selection largely depends on the technology the
+							Application Under Test is built on.</li>
+						<li class="fragment fade-in">For instance, QTP does not support Informatica. So QTP cannot be
+							used for testing Informatica applications.</li>
+						<li class="fragment fade-in">It’s a good idea to conduct a Proof of Concept of Tool on AUT.</li>
+					</ul>
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">
+						<div data-id="box1"
+							style="background-color: #959595; width: 100%; height: 5px; margin: 10px; border-radius: 5px; font-size: 5px;">
+						</div>
+					</div>
+					<div>
+						<h2 style="margin-top: 20px; color: #ff2c2d;">Automation process</h2>
+						<h4>The following steps are followed in an automation process.</h4>
+						<p
+							style="background-color: rgb(255, 86, 86);  width: 700px; height: 50px; margin: 0 auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Tool Selection</p>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div>
+						<h2 style="color: #ff2c2d;">Automation process</h2>
+						<h4 style="margin-bottom: 20px;">The following steps are followed in an automation process.</h4>
+						<p
+							style="background-color: rgb(255, 86, 86); width: 700px; height: 50px; margin: 0 auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Tool Selection</p>
+					</div>
+					<div class="r-hstack justify-center">
+						<div data-id="box1" data-auto-animate-delay="0"
+							style="background-color: #56ccff; width: 700px; height: 50px; margin: 10px; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Define scope of Automation</div>
+					</div>
+				</section>
+				<section>
+					<h2 style="color: #56ccff;">Scope of Automation</h2>
+					<ul>
+						<li class="fragment fade-in">Scope of automation is the area of your Application Under Test
+							which will be automated.</li>
+					</ul>
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">
+						<div data-id="box1"
+							style="background-color: #959595; width: 100%; height: 5px; margin: 10px; border-radius: 5px; font-size: 5px;">
+						</div>
+					</div>
+					<div>
+						<h2 style="margin-top: 20px; color: #ff2c2d;">Automation process</h2>
+						<h4>The following steps are followed in an automation process.</h4>
+						<p
+							style="background-color: rgb(255, 86, 86);  width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Tool Selection</p>
+						<p
+							style="background-color: #56ccff;  width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Define scope of Automation</p>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div>
+						<h2 style="color: #ff2c2d;">Automation process</h2>
+						<h4 style="margin-bottom: 20px;">The following steps are followed in an automation process.</h4>
+						<p
+							style="background-color: rgb(255, 86, 86); width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Tool Selection</p>
+						<p
+							style="background-color: #56ccff;  width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Define scope of Automation</p>
+					</div>
+					<div class="r-hstack justify-center">
+						<div data-id="box1" data-auto-animate-delay="0"
+							style="background-color: #6156ff; width: 700px; height: 50px; margin: 0px; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Planning, Design and Development</div>
+					</div>
+				</section>
+				<section>
+					<h2 style="color: #6156ff;">Planning, Design, and Development</h2>
+					<ul>
+						<li class="fragment fade-in">During this phase, you create an Automation strategy & plan.</li>
+					</ul>
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">
+						<div data-id="box1"
+							style="background-color: #959595; width: 100%; height: 5px; margin: 10px; border-radius: 5px; font-size: 5px;">
+						</div>
+					</div>
+					<div>
+						<h2 style="margin-top: 20px; color: #ff2c2d;">Automation process</h2>
+						<h4>The following steps are followed in an automation process.</h4>
+						<p
+							style="background-color: rgb(255, 86, 86);  width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Tool Selection</p>
+						<p
+							style="background-color: #56ccff;  width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Define scope of Automation</p>
+						<p
+							style="background-color: #6156ff; width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Planning, Design and Development</p>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div>
+						<h2 style="color: #ff2c2d;">Automation process</h2>
+						<h4 style="margin-bottom: 20px;">The following steps are followed in an automation process.</h4>
+						<p
+							style="background-color: rgb(255, 86, 86); width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Tool Selection</p>
+						<p
+							style="background-color: #56ccff; width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Define scope of Automation</p>
+						<p
+							style="background-color: #6156ff; width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Planning, Design and Development</p>
+					</div>
+					<div class="r-hstack justify-center">
+						<div data-id="box1" data-auto-animate-delay="0"
+							style="background-color: #ffbb56; width: 700px; height: 50px; margin: 0px; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Execution</div>
+					</div>
+				</section>
+				<section>
+					<h2 style="color: #ffbb56;">Test Execution</h2>
+					<ul>
+						<li class="fragment fade-in">Automation Scripts are executed during this phase.</li>
+					</ul>
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">
+						<div data-id="box1"
+							style="background-color: #959595; width: 100%; height: 5px; margin: 10px; border-radius: 5px; font-size: 5px;">
+						</div>
+					</div>
+					<div>
+						<h2 style="margin-top: 20px; color: #ff2c2d;">Automation process</h2>
+						<h4>The following steps are followed in an automation process.</h4>
+						<p
+							style="background-color: rgb(255, 86, 86);  width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Tool Selection</p>
+						<p
+							style="background-color: #56ccff;  width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Define scope of Automation</p>
+						<p
+							style="background-color: #6156ff; width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Planning, Design and Development</p>
+						<p
+							style="background-color: #ffbb56; width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Execution</p>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div>
+						<h2 style="color: #ff2c2d;">Automation process</h2>
+						<h4 style="margin-bottom: 20px;">The following steps are followed in an automation process.</h4>
+						<p
+							style="background-color: rgb(255, 86, 86); width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Tool Selection</p>
+						<p
+							style="background-color: #56ccff; width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Define scope of Automation</p>
+						<p
+							style="background-color: #6156ff; width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Planning, Design and Development</p>
+						<p
+							style="background-color: #ffbb56; width: 700px; height: 50px; margin: 10px auto; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Test Execution</p>
+					</div>
+					<div class="r-hstack justify-center">
+						<div data-id="box1" data-auto-animate-delay="0"
+							style="background-color: #56ff75; width: 700px; height: 50px; margin: 0px; border-radius: 5px; font-size: 40px; color: #ffffff;">
+							Maintenance</div>
+					</div>
+				</section>
+				<section>
+					<h2 style="color: #56ff75;">Maintenance</h2>
+					<ul>
+						<li class="fragment fade-in">As new functionalities are added to the System Under Test with
+							seccessive cycles, Automation Scripts need to be added, reviewed and maintained for each
+							release cycle.
+							<ul class="fragment fade-in">
+								<li>Maintenance becomes necessary to improve effectiveness of Automation Scripts.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<img src="https://c.tenor.com/ysNkxVXVtoUAAAAM/mr-bean-bean.gif" height="300px" alt="">
+					<h2>How to Choose an Automation Tool?</h2>
+				</section>
+				<section>
+					<h4>Following criterion will help you select the best tool for your requirement.</h4>
+					<ul>
+						<li class="fragment fade-in">Ease of use</li>
+						<li class="fragment fade-in">Support for various types of test – including functional, test
+							management, mobile, etc…</li>
+						<li class="fragment fade-in">Support for multiple testing frameworks</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<img src="https://media0.giphy.com/media/62e1Tdz7h6vxfy65T4/200.webp?cid=ecf05e478qjtb6pedkkibn9cqr8tt4aof1g6dnk9t0csro3t&rid=200.webp&ct=g"
+						height="300px" alt="">
+					<h2>Tool selection</h2>
+				</section>
+				<section>
+					<h2>First, Identify the requirements, explore various tools and its capabilities</h2>
+				</section>
+				<section>
+					<img src="https://media0.giphy.com/media/cbb8zL5wbNnfq/200w.webp?cid=ecf05e470lf1r21tdeci64vubumh60wf5bo8k3nlgxdvstqh&rid=200w.webp&ct=g"
+						height="250px" alt="">
+					<h2>Set the expectation from the tool and go for a Proof Of Concept.</h2>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Framework for Automation</h2>
+				</section>
+				<section>
+					<h4>A framework is set of automation guidelines which help in:</h4>
+					<ul>
+						<li class="fragment fade-in">Maintaining consistency of Testing</li>
+						<li class="fragment fade-in">Less Maintenance of code</li>
+						<li class="fragment fade-in">Improve re-usability</li>
+					</ul>
+				</section>
+				<section>
+					<img src="https://media3.giphy.com/media/odhpHSEn1xQfisvIaT/200w.webp?cid=ecf05e472acgiboktsclgbhver59o2j3w9k3m43ipywfh3fr&rid=200w.webp&ct=g"
+						height="400px" alt="">
+				</section>
+				<section>
+					<ol>
+						<li>Data Driven Automation Framework</li>
+						<li>Keyword Driven Automation Framework</li>
+						<li>Modular Automation Framework</li>
+						<li>Hybrid Automation Framework</li>
+					</ol>
+				</section>
+			</section>
+			<section>
+				<section>
+
+					<h2>Benefits of Automation Testing</h2>
+					<img src="https://media.giphy.com/media/8xgqLTTgWqHWU/giphy.gif" height="400px" alt="">
+				</section>
+				<section>
+					<div class="fragment fade-right" style="display: flex; align-items: center; gap: 30px">
+						<span>70% faster than the manual testing</span>
+						<img src="https://media3.giphy.com/media/B1uajA01vvL91Urtsp/200w.webp?cid=ecf05e47v58gq4x4mxbpulqpqpgixyh55gh8ylo38j8w3s67&rid=200w.webp&ct=g"
+							height="140px" alt="">
+					</div>
+					<div class="fragment fade-left" style="display: flex; align-items: center; gap: 30px">
+						<img src="https://media2.giphy.com/media/d3mlE7uhX8KFgEmY/200w.webp?cid=ecf05e47tzmxbdar2np2ptov8n9r80qao6jo2z94n9gdyx7h&rid=200w.webp&ct=g"
+							height="140px" alt="">
+						<span>code architecture is better</span>
+					</div>
+					<div class="fragment fade-right" style="display: flex; align-items: center; gap: 30px">
+						<span>Human Intervention is not required while execution</span>
+						<img src="https://media1.giphy.com/media/3o7TKIAx6OXBhXfXWM/200w.webp?cid=ecf05e47n7y8h94aadkjkdaobfg30kd7ypqpblpz1bsi0itg&rid=200w.webp&ct=g"
+							height="140px" alt="">
+					</div>
+				</section>
+			</section>
+			<section>
+				<section>
+					<img src="https://media1.tenor.com/images/c03eb5a45074347b9b8835e7a163ea99/tenor.gif?itemid=15762810"
+						height="520px" alt="">
+				</section>
+				<section>
+					<p>The right selection of automation tool, testing process, and team, are important players for
+						automation to be successful.</p>
+				</section>
+				<section>
+					<div
+						style="background-image: url('https://media.giphy.com/media/KGw8FDgFPZhZAxYkZI/giphy.gif'); height: 500px; background-size: 100%; display: flex; justify-content: space-between; align-items: end;">
+						<div
+							style="margin: 30px; color: #342c0f; background-color: #ffffff9c; padding: 5px 10px; border-radius: 3px;">
+							Manual testing</div>
+						<div
+							style="margin: 30px; color: #342c0f; background-color: #ffffff9c; padding: 5px 10px; border-radius: 3px;">
+							Automation testing</div>
+					</div>
+				</section>
+				<section>
+					<img src="https://c.tenor.com/1plWI277cB4AAAAC/sad-sorry.gif" height="280px" alt="">
+					<h2 style="color: #465389;">Sorry for my broken english.. I tried.</h2>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
